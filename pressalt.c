@@ -14,14 +14,11 @@ void calcPressureAltitude(void);
 void calcDensityAltitude(void);
 void showHelp(void);
 
-// Main Menu
-void startMenu()
+void showOptions(void)
 {
-    system("cls");
+    printf("\n\n1) Calculate\n2) Help\n3) Quit\n");
 
-    printf("DENSITY ALTITUDE CALCULATOR\n\n");
-    printf("1) Calculate\n2) Help\n3) Quit\n");
-
+    // Show options
     int option;
     scanf("%i", &option);
 
@@ -33,31 +30,28 @@ void startMenu()
     }
 }
 
-void showHelp()
+// Main Menu
+void startMenu(void)
+{
+    system("cls");
+    printf("DENSITY ALTITUDE CALCULATOR");
+    showOptions();
+}
+
+void showHelp(void)
 {
     system("cls");
 
     printf("HELP\n\n");
     printf("This program calculates the pressure altitude of an aerodrome,\n");
     printf("as well as the density altitude at the aerodrome's elevation\n\n");
-
     printf("Pressure altitude formula: Aerodrome Elevation - Difference in QNH * 30\n\n");
     printf("Density altitude formula:\n");
     printf("Aerodrome Pressure = 15 - (2 * Aerodrome Elevation / 1000)\n");
     printf("Temperature Deviation = Surface Temperature - Aerodrome Temperature\n");
-    printf("Density Altitude = Pressure Altitude + Temperature Deviation * 120\n\n");
+    printf("Density Altitude = Pressure Altitude + Temperature Deviation * 120");
 
-    printf("1) Main Menu\n2) Quit\n");
-
-    // Show options
-    int option;
-    scanf("%i", &option);
-
-    switch(option)
-    {
-        case 1: startMenu(); break;
-        case 2: exit(0); break;
-    }
+    showOptions();
 }
 
 int absoluteValue(int value)
@@ -115,18 +109,7 @@ void calcDensityAltitude(void)
 
     printf("\nDensity Altitude: %i ft", densityAltitude);
 
-    // Show options
-    printf("\n\n1) Calculate\n2) Help\n3) Quit\n");
-
-    int option;
-    scanf("%i", &option);
-
-    switch(option)
-    {
-        case 1: calcPressureAltitude(); break;
-        case 2: showHelp(); break;
-        case 3: exit(0); break;
-    }
+    showOptions();
 }
 
 int main(void)
