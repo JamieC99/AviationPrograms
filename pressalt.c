@@ -62,6 +62,8 @@ void calcDensityAltitude(void)
     densityAltitude = pressureAltitude + (tempDifference * 120);
 
     printf("\nDensity Altitude: %i ft", densityAltitude);
+
+    scanf("%i");
 }
 
 int main(void)
