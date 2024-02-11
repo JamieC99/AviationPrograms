@@ -25,7 +25,7 @@ void showOptions(void)
 
     switch(option)
     {
-        case 1: mainMenu();
+        case 1: mainMenu(); break;
         case 2: calcPressureAltitude(); break;
         case 3: showHelp(); break;
         case 4: exit(0); break;
