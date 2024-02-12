@@ -7,7 +7,7 @@ void mainMenu(void)
     system("cls");
 
     printf("AVIATION PROGRAMS\n\n");
-    printf("Would calculation would you like to perform?\n\n1) Density Altitude\n2)\n3) Quit\n");
+    printf("Which calculation would you like to perform?\n\n1) Density Altitude\n2)\n3) Quit\n");
 
     int choice;
     scanf("%i", &choice);
