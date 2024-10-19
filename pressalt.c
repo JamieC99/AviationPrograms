@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <windows.h>
 
 #define standardPressure 1013
 #define standardTemperature 15
@@ -35,13 +34,13 @@ void showOptions(void)
 // Main Menu
 void densityAltitudeMenu(void)
 {
-    system("cls");
+    system("clear");
     showOptions();
 }
 
 void showHelp(void)
 {
-    system("cls");
+    system("clear");
 
     printf("HELP\n\n");
     printf("This program calculates the pressure altitude of an aerodrome,\n");
@@ -63,7 +62,7 @@ int absoluteValue(int value)
 
 void calcPressureAltitude(void)
 {
-    system("cls");
+    system("clear");
 
     printf("PRESSURE ALTITUDE\n\n");
 
